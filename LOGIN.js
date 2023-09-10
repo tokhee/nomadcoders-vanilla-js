@@ -15,7 +15,7 @@ const loginForm =document.querySelector("#login-form");
 const loginInput =document.querySelector("#login-form input");
     //const loginButton = document.querySelector("#login-form button");
 
-//6. 유저에게 인사 : 이 인사는 유저이름을 입력, 제출 후 나와야하므로 hidden 속성을 준다
+//6. 유저에게 인사 : 이 인사는 유저이름을 입력, 제출 후 나와야하므로 hidden을 준다
 const greeting = document.querySelector("#greeting");
 //html에 클래스 hidden이 있음. css에서 클래스 hidden을 display: none으로 설정해둠.
 const HIDDEN_CLASSNAME = "hidden";
