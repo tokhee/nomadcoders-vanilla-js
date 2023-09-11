@@ -16,12 +16,17 @@ NomadCoders : 바닐라 JS로 크롬 앱 만들기
 
 2-1. function 정의
   1) function onloginButton() : 2)function onloginSubmit(event) 배우기 전 사용
-    ver.1)
+
+ ver.1)   
+```javaScript
       function onloginButton(){
-      console.dir(loginInput.value);
-      console.log("로그인버튼 클릭했음");
+        console.dir(loginInput.value);
+        console.log("로그인버튼 클릭했음");
       }
-    ver.2)
+```
+ 
+ ver.2)   
+```javaScript
       function onloginButton() {
         const username = loginInput.value;
         if (username === "") {
@@ -30,7 +35,9 @@ NomadCoders : 바닐라 JS로 크롬 앱 만들기
           alert("이름이 너무 깁니다.");
         }
       }
+```
   2)function onloginSubmit(event) : 1)을 HTMl,CSS,JS를 활용해 디벨롭한 버전
+  ```javaScript
       function onloginSubmit(event){
         event.preventDefault();
         loginForm.classList.add(HIDDEN_CLASSNAME);
@@ -40,14 +47,16 @@ NomadCoders : 바닐라 JS로 크롬 앱 만들기
         greeting.classList.remove(HIDDEN_CLASSNAME)
         paintGreetings(username)
       }
+```
   3)function paintGreetings(username)
+  ```javaScript
       function paintGreetings(username){
         greeting.innerText = `Hello ${username}`;
         greeting.classList.remove(HIDDEN_CLASSNAME)
       }
-
+```
 3-1. function 실행 : if문 사용 및 사용자 입력값 상수선언 및 저장 활용
-
+```javaScript
   const savedUsername = localStorage.getItem(USERNAME_KEY)
   if(savedUsername===null){
     //form 화면 보여주기
@@ -57,3 +66,4 @@ NomadCoders : 바닐라 JS로 크롬 앱 만들기
     //greeting 화면 보여주기
     paintGreetings(savedUsername);
   }
+```
